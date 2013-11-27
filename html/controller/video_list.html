@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matt's Everything Center</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<h4>List of Videos</h4>
+	<ul id="videos">
+	</ul>
+	<script>
+		function httpGet(getURL)
+		{
+			var xmlHttp = null;
+			xmlHttp = new XMLHttpRequest();
+			xmlHttp.open("GET", getURL, false);
+			xmlHttp.send(null);
+			string = xmlHttp.responseText;
+			return JSON.parse(string);
+		}
+	 	var movies = httpGet('http://localhost:1337/api/videos');
+	 	for (var key in movies.videos)
+	 	{
+	 		$('#videos').append('<li id="'+key+'" class="video_loc">'+movies.videos[key].name+'</li>');
+	 	}
+
+	 	$('.video_loc').click(function(){
+	 		var video_id = $(this).attr('id');
+	 		var api_url = 'http://localhost:1337/api/videos/' + video_id;
+	 		$.get(api_url, function(data){
+	 			console.log(data);
+	 		});
+	 	});
+	</script>
+</body>

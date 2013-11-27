@@ -1,0 +1,10 @@
+TODO 
+
+ -Write controller for listing and selecting videos
+ -Write handler for when a video is selected 
+ 	-set video based on id
+ 	-send redirect to play page
+ 	-socket on client side that calls for video
+ 	-socket on server side that recieves call for videos and sends source
+ 	-function on client side that takes the source, sets it, and plays it
+

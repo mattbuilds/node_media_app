@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matt's Everything Center</title>
+</head>
+<body>
+	<h1>Welcome to Matt's Everything Center</h1>
+	<h3>Videos</h3>
+	<h3>Music</h3>
+	<h3>Home Automation</h3>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io.connect('http://localhost');
+		socket.on('redirect', function (data) {
+			window.location.href = data.page;
+		});
+	</script>
+	<h1 id="thingy"></h1>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Video Player</title>
+</head>
+<body>
+	<h3>Welcome to the Video Player</h3>
+	<p>Please Select your video</p>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io.connect('http://localhost');
+		socket.on('redirect', function (data) {
+	 		window.location.href = data.page;
+	  	});
+	</script>
+</body>
