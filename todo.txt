@@ -1,8 +1,19 @@
 TODO 
 
- - Set get value in backend for URL
- - Write JS function to get value from url
- - Send JSON to api to return location of video
- - set location to video source
- - play video
+Now
+	- Set get value in backend for URL
+	- Write JS function to get value from url
+	- Send JSON to api to return location of video
+	- set location to video source
+	- play video
 
+Next
+	- Create useable screenflow on frontend
+	- Test with actual videos
+ 	- Setup MongoDB to store all videos
+ 	- Write Script to add videos
+
+Later
+	- Setup Database to include Categories, Movies, TV Shows (Better file system)
+	- Add a similar service but with music
+	
