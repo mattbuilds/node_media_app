@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="http://localhost:1337/css/video.css">
+		<link rel="stylesheet" type="text/css" href="http://192.168.1.30:1337/css/video.css">
 		<script src="/socket.io/socket.io.js"></script>
 		<script>
-			var socket = io.connect('http://localhost');
+			var socket = io.connect('http://192.168.1.30');
 			var src;
 			socket.on('play', function (data) {
 				src = data.location;
@@ -22,7 +22,7 @@
 	</body>
 	<script>
 		var video = $('#media');
-		var src = "http://localhost:1337/videos/happy.mp4";
+		var src = "http://192.168.1.30:1337/videos/happy.mp4";
 		video.find("#vid_src").attr("src", src);
 		video.load();
 		video.get(0).play();

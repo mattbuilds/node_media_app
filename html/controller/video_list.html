@@ -19,7 +19,7 @@
 			string = xmlHttp.responseText;
 			return JSON.parse(string);
 		}
-	 	var movies = httpGet('http://localhost:1337/api/videos');
+	 	var movies = httpGet('http://192.168.1.30:1337/api/videos');
 	 	for (var key in movies.videos)
 	 	{
 	 		$('#videos').append('<li id="'+key+'" class="video_loc">'+movies.videos[key].name+'</li>');
@@ -27,7 +27,7 @@
 
 	 	$('.video_loc').click(function(){
 	 		var video_id = $(this).attr('id');
-	 		var api_url = 'http://localhost:1337/api/videos/' + video_id;
+	 		var api_url = 'http://192.168.1.30:1337/api/videos/' + video_id;
 	 		$.get(api_url, function(data){
 	 			console.log(data);
 	 		});
